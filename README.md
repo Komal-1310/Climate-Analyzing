@@ -1,33 +1,61 @@
-# 🌍 Climate and Development Indicator Analysis using Gapminder Data
+# SmartClimate: Sensor-Based Climate Data Analysis for Smart Cities
 
-This project analyzes socio-economic indicators like **Life Expectancy**, **GDP per Capita**, and **Population** across various countries over the years using the **Gapminder dataset**. The focus is on visualizing development trends and identifying global disparities in human progress.
+## 📌 Project Overview
+SmartClimate is a climate data analysis project designed for a smart city initiative. The objective is to process over 10 years of temperature sensor data to uncover meaningful climate patterns, detect anomalies, and prepare the data for integration into machine learning models.
 
-## 📊 Project Highlights
+---
 
-- 📈 Life expectancy trend analysis (1952–2007)
-- 🌐 Continent-wise GDP and population comparison
-- 📉 Correlation between GDP and Life Expectancy
-- 🔍 Identifying top/bottom performing countries
-- 📦 Clean, modular code for future extensions
+## 🧠 Problem Statement
+A European smart city needed to:
+- Analyze massive volumes of time-series sensor data.
+- Calculate daily, monthly, and yearly climate trends.
+- Identify anomalies in environmental readings.
+- Integrate processed data with ML models for predictive insights.
 
-## 🗂 Dataset Used
+---
 
-- **Fields**:
-  - `country`: Name of the country
-  - `continent`: Continent the country belongs to
-  - `year`: Year of record (in 5-year steps)
-  - `lifeExp`: Life expectancy at birth
-  - `pop`: Population
-  - `gdpPercap`: GDP per capita (USD)
+## ✅ Solution Overview
+*Technologies Used:*
+- Python, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn
 
-## 🛠️ Tech Stack
+*Steps:*
+1. *Data Loading:* Imported CSV using NumPy for performance.
+2. *Data Aggregation:*
+   - Daily averages (row-wise)
+   - Monthly averages (sensor-wise)
+3. *Outlier Detection:*
+   - Statistical method: 2σ (standard deviation rule)
+   - ML method: Isolation Forest
+4. *Optimization:* Vectorized NumPy operations reduced runtime drastically.
+5. *Visualization:* Plotted trends and outliers using matplotlib and seaborn.
+6. *ML Integration:* Cleaned data passed into IsolationForest for anomaly prediction.
 
-- `Python`
-- `Pandas`
-- `Matplotlib`
-- `Seaborn`
-- `NumPy`
-- (Optional) `Plotly` for interactive charts
+---
 
-## 📁 Project Structure
+## 📊 Visualizations Included
+- Daily Average Temperature Trend
+- Monthly Average Temperature per Sensor
+- Sensor Readings Heatmap
+- Anomaly Detection using Isolation Forest
 
+---
+
+## 📁 Files
+- temp_data.csv - Climate data from sensors.
+- climate_analysis.py - Full project code.
+- README.md - Project overview and documentation.
+
+---
+
+## 🔍 Future Scope
+- Real-time sensor data stream integration
+- Deploy anomaly alerts on dashboards
+- Use deep learning for long-term climate forecasting
+
+---
+
+## 🧑‍💻 Author
+Komal Patil  
+Data Analyst | Python | SQL | ML | Visualization
+
+---
